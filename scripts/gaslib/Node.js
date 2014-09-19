@@ -5,12 +5,19 @@ define([
 
     var Node = function(){
         this.position = new Point();
-        this.caption = "Node";
+        this.__caption = "Node";
     };
 
 
     Node.constructor = Node;
 
+    Node.prototype.setCaption = function (caption) {
+      this.__caption = caption;
+    };
+
+    Node.prototype.getCaption = function () {
+      return this.__caption;
+    };
 
     return Node;
 });
