@@ -1,0 +1,37 @@
+define([], function(){
+
+    /**
+     * The Iterator class
+     *
+     * @class Iterator
+     * @param collection the collection that is being iterated at
+     * @constructor
+     */
+    var Iterator = function(collection){
+        this.collection = collection;
+        this.position = -1;
+    };
+
+
+    Iterator.constructor = Iterator;
+
+
+    /**
+     * Checks if there is next item in the iterator
+     *
+     *
+     * @method hasNext
+     * @returns {boolean}
+     */
+    Iterator.prototype.hasNext = function(){
+        return (this.position + 1) < this.collection.length;
+    };
+
+
+    Iterator.prototype.next = function(){
+        return this.collection[++this.position];
+    };
+
+
+    return Iterator;
+});
