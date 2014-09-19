@@ -1,6 +1,6 @@
 define([
-    
-], function(){
+    "gaslib/Iterator"
+], function(Iterator){
 
     var Collection = function(){
         this.__collection = [];
@@ -12,6 +12,11 @@ define([
 
     Collection.prototype.add = function(element){
         this.__collection.push(element);
+    };
+
+    Collection.prototype.getIterator = function() {
+      iterator = new Iterator(this.__collection);
+      return iterator;
     };
 
 
