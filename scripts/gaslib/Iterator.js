@@ -10,5 +10,15 @@ define([], function(){
     Iterator.constructor = Iterator;
 
 
+    Iterator.prototype.getElement = function (position) {
+      return this.collection[position];
+    };
+
+
+    Iterator.prototype.getSize = function () {
+      return this.collection.length;
+    };
+
+
     return Iterator;
 });
