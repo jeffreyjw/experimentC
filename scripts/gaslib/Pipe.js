@@ -1,6 +1,7 @@
 define([
-    "gaslib/Point"
-], function(Point){
+    "gaslib/Point",
+    "gaslib/Helpers"
+], function(Point, Helpers){
 
     var Pipe = function(){
         this.flow = 0;
@@ -22,6 +23,11 @@ define([
         {
             return 0;
         }
+    };
+
+
+    Pipe.prototype.length = function (first, second) {
+        return Helpers.distanceInKm(first, second);
     };
 
 
