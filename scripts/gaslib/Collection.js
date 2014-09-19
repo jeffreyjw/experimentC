@@ -14,7 +14,7 @@ define([
         this.__collection.push(element);
     };
 
-    Collection.prototype.getIterator = function() {
+    Collection.prototype.iterator = function() {
       iterator = new Iterator(this.__collection);
       return iterator;
     };
